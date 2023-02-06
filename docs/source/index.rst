@@ -1,22 +1,43 @@
-Welcome to Lumache's documentation!
-===================================
+.. VRCFT Setup documentation master file, created by
+   sphinx-quickstart on Sat Feb  4 17:40:10 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+=======================================
+Welcome to VRCFT Setup documentation!
+=======================================
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Learn how to use face tracking for VRChat. 
 
 .. note::
 
-   This project is under active development.
+   Documentation under development
 
-Contents
---------
+Index
+=========================
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Hardware/Software Setup:
 
-   usage
-   api
+   ware/vive_pro_eye
+   ware/vive_facial_tracker
+   ware/vive_wireless
+   ware/quest_pro
+   ware/terminology
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Avatar Setup:
+
+   avatar/test
+
+Indices and tables
+==================
+
+.. * :ref: ware/terminology
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
