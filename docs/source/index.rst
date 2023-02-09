@@ -9,6 +9,12 @@ Welcome to VRCFT Setup documentation!
 
 Learn how to use face tracking for VRChat. 
 
+Join the `VRCFT Discord <https://discord.gg/Fh4FNehzKn>`_
+
+Visit the `VRCFaceTracking Github <https://github.com/benaclejames/VRCFaceTracking>`_
+
+.. TODO learn how to use External Links Extension https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html
+
 .. note::
 
    Documentation under development
@@ -33,6 +39,7 @@ Index
    ware/quest_pro
    ware/focus3
    ware/iPhone
+   ware/sranipal
 
 .. toctree::
    :maxdepth: 1
