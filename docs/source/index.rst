@@ -18,19 +18,27 @@ Index
 
 .. toctree::
    :maxdepth: 1
+   :caption: VRC Face Tracking
+
+   VRCFT
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: Hardware/Software Setup:
 
    ware/vive_pro_eye
    ware/vive_facial_tracker
    ware/vive_wireless
    ware/quest_pro
-   ware/terminology
+   ware/focus3
+   ware/iPhone
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Avatar Setup:
 
-   avatar/test
+   avatar/overview
 
 Indices and tables
 ==================

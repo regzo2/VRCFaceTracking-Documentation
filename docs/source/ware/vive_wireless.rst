@@ -1,4 +1,10 @@
+======================================
 Vive Wireless and Eye + Face Tracking
 ======================================
 
-It works
+.. note::
+
+   Document under construction
+
+
+It works (with some quirks). 
