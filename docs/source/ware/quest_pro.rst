@@ -65,6 +65,8 @@ Enabling Eye and Face Tracking on the Headset
         :align: center
         :alt: Quest Pro headset settings eye tracking
 
+.. _Link/Airlink Setup:
+
 Oculus Link/Airlink Setup
 -------------------------
 
@@ -74,7 +76,7 @@ If you prefer following video tutorials, these following videos by Ninka\_#7958 
 It is still **recommended to read through this text reference** after as their videos may miss or glance over some important steps/details! 
 
 - ALXR client method: https://www.youtube.com/watch?v=aB90qxQptUk
-- TofuLemon's method: https://www.youtube.com/watch?v=uZh7cY170rY
+- TofuLemon's OpenXR module method: https://www.youtube.com/watch?v=uZh7cY170rY
    
 #. **Set your headset to developer mode using the Oculus mobile app**. :ref:`enable developer mode`
 
@@ -100,10 +102,10 @@ It is still **recommended to read through this text reference** after as their v
     
 #. Navigate to the ``Beta`` tab. Enable ``Developer Runtime Features``, ``Eye tracking over Oculus Link``, and ``Natural Facial Expressions over Oculus Link``. 
 
-    - You can try enabling ``Passthrough over Oculus Link`` but that may cause issues. 
+    - You can try enabling ``Passthrough over Oculus Link`` but that *may* cause issues. 
     
     .. note::
-        If you do not see these options, you did not follow the previous step. 
+        If you do not see these options, you did not follow the previous steps correctly. 
    
     .. image:: images/oculus_pc_app_beta.png
         :width: 600
@@ -141,7 +143,7 @@ This method uses コレヂャン (Korejan)#6829's ALXR windows client to pull th
 #. Create a .txt file named ``questProIP`` in the same directory as the ``VRCFaceTracking.exe`` and ``questProSensitivity.ini``.
    In the newly created file, enter ``127.0.0.1`` as the only text in the file and save the file. 
 
-END SETUP. See :ref:`Startup Procedure` for use instructions. 
+Setup Complete!. See :ref:`Startup Procedure` for use instructions. 
 
 OpenXR Module Method
 ^^^^^^^^^^^^^^^^^^^^^
@@ -156,7 +158,9 @@ This method uses TofuLemon#2692's Quest Pro OpenXR build of VRCFT and tracking m
     .. note::
         You can easily get to your ``..AppData\Roaming`` folder by typing ``%AppData%`` into your Windows search or the address bar of any Explorer window. 
 
-END SETUP. See :ref:`Startup Procedure` for use instructions. 
+#. Unblock the ``VRCFT Module - QuestOpenXR.dll`` that was copied. See :ref:`unblocking downloaded dynamic link libraries`
+
+Setup Complete! See :ref:`Startup Procedure` for use instructions. 
 
 .. _Startup Procedure:
 
@@ -164,7 +168,9 @@ Startup Procedure for Oculus Link/Airlink
 ------------------------------------------
 
 #. Launch (Air)Link on the Quest Pro. Make sure you are in the Oculus Home environment before proceding.
+   
    #. (If you are using ALXR client method) Launch the ALXR windows client using the previously created shortcut. 
+
 #. Launch VRCFaceTracking. If you are using TofuLemon's VRCFaceTracking, it will start an internal OpenXR client. 
 #. Launch SteamVR **from the PC**
 
@@ -238,7 +244,7 @@ ALVR/ALXR Setup
 
 If you are planning on using a USB cable instead of Wifi streaming for the ALXR/ALVR connection
 
-#. Follow the official ALVR community instructions for setting up the USB connection: https://github.com/alvr-org/ALVR/wiki/Using-ALVR-through-a-USB-connection
+#. Follow the `official ALVR community instructions <https://github.com/alvr-org/ALVR/wiki/Using-ALVR-through-a-USB-connection>`_ for setting up the USB connection.
 #. Change the text in the ``questProIP`` file to ``127.0.0.1``
 
 Startup Procedure for ALVR/ALXR
@@ -258,8 +264,8 @@ See https://github.com/bdunderscore/OpenVR-SpaceCalibrator/tree/continuous-cal
 Using Index Controllers with the Quest Pro with Link/Airlink
 -------------------------------------------------------------
 
-Download these powershell scripts. To run, right-click the file -> "Run with Powershell"
-https://discord.com/channels/849300336128032789/1033745772979699775/1056009844701806643
+Download these `powershell scripts (Discord Server link!) <https://discord.com/channels/849300336128032789/1033745772979699775/1056009844701806643>`_. 
+To run, right-click the file -> "Run with Powershell"
 
 Using Index Controllers with the Quest Pro with ALVR/ALXR
 -------------------------------------------------------------
@@ -274,15 +280,29 @@ The customizability of ALVR allows a few options in this regard. All following m
 Common Issues (and How to Solve Them)
 =====================================
 
-- ALXR/ALVR methods: "[ERROR] No connection could be made because the target machine actively refused it"
+- **ALXR/ALVR methods: "[ERROR] No connection could be made because the target machine actively refused it"**
   
   - Cause: The ALXR VRCFT server is not running. 
+  - Solution: Review the ALXR window client commandline output. Usually the problem is related to missing a step in :ref:`link/airlink setup`, 
+    and the text output may make it clear as to what step exactly was forgotten. 
 
-- OpenXR VRCFT module method: "[QuestOpenXR] Failed to GetFaceExpressionWeightsFB"
+- **OpenXR VRCFT module method: VRCFaceTracking program isn't starting at all**
+
+  - Cause: You need to unblock the custom module .dll that you put in CustomLibs. 
+  - Solution: See :ref:`unblocking downloaded dynamic link libraries`
+
+- **OpenXR VRCFT module method: "[QuestOpenXR] Failed to GetFaceExpressionWeightsFB"**
   
   - Cause: There is some permission in the setup that was not set correctly.
-  - Solution: Re-run through the :ref:`Startup Procedure`. 
+  - Solution: *Carefully* re-run through the :ref:`link/airlink setup`, paying careful attention to all the steps before the method split.
 
-- "I 100% made sure I followed all setup correctly and I'm **not getting any visible errors anywhere**, but VRC only receives 0 values for all parameters"
+- **"I 100% made sure I followed all setup correctly and I'm *not getting any visible errors anywhere*, but VRC only receives 0 values for all parameters (and VRC loaded a non-zero number of parameters from config)"**
  
   - Solution: Try toggling the eye and face tracking enables in the headset settings. 
+
+- **Oculus Link/Airlink: My playspace calibration resets if I take off the headset.**
+
+  - Cause: When the Quest headset enters sleep mode after detecting you have taken off the headset, it loses it's original reference space to which the SteamVR space was calibrated to. 
+  - Solution: Download the `Meta Quest Developer Hub <https://developer.oculus.com/documentation/unity/ts-odh/>`_ and follow the instructions for *Connect Headset to MQDH* and *Disable proximity sensor and guardian*. 
+    This will prevent the headset from entering sleep, but does mean your headset stays fully active even if you take it off. 
+  

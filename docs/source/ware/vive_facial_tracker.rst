@@ -38,6 +38,12 @@ Setup for the Vive Facial Tracker will be split across different types of headse
 
 There are some special notes for certain headsets and setup methods in the last section.
 
+Once SRanipal is installed and the facial tracker connected to the computer and powered on, SRanipal might be unresponsive for a while the Facial Tracker updates its firmware. 
+During this time you will see the Vive Facial Tracker show up as "HTC Boot" in Windows Device Manager. 
+Do **NOT** unplug the face tracker while it is in this state.
+When it finishes, there should be a little pop-up notification (possibly hidden under other windows) saying that the lip tracker firmware was successfully updated, and now
+you should be able to see a "HTC Multimedia Camera" device instead in Device Manager. 
+
 .. note:: 
     A shoddy USB connection for the Facial Tracker can lead to it getting stuck trying to update its firmware, never initializing. 
     If possible, the plug the facial tracker **directly into a USB-C port on your computer** to allow it to update (if it needs to). 
@@ -47,9 +53,7 @@ Vive Pro Series
 ---------------
 
 This is by far the easiest headset(s) to setup the Vive Facial Tracker for, as it was made for these headsets. 
-Follow the official Vive Facial Tracker installation instructions: https://www.vive.com/us/support/facial-tracker/category_howto/tracker.html
-
-Once SRanipal is installed and the headset connected to the computer and powered on, SRanipal might be unresponsive for a while the Facial Tracker updates its firmware. 
+Follow the `official Vive Facial Tracker installation instructions <https://www.vive.com/us/support/facial-tracker/category_howto/tracker.html>`_
 
 Vive Pro Mounting Alternatives
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,10 +61,10 @@ Vive Pro Mounting Alternatives
 The adhesive that comes with the Vive Facial Tracker isn't the best, and can easily fail with a knock to the headset. 
 Here are some alternative mounting solutions:
 
-#. 3D printed Mount: https://www.thingiverse.com/thing:5405617
+#. 3D printed alternative Mount: https://www.thingiverse.com/thing:5405617
 #. Use 3M VHB Tape as adhesive replacement
 #. Wrap rubber bands around the facial tracker mounting legs and whole headset (ask Azmidi...)
-#. Wrap a wire around everything??? (ask PLPlolol...)
+#. Wrap a wire around everything??? (ask PLPlolol in the VRCFT Discord...)
 
 Valve Index / Wired VR Headsets
 --------------------------------
@@ -80,7 +84,7 @@ This section assume you are intending to use a USB-C female to USB-A Male USB ad
 #. Get a **USB 3.0 or higher** USB-C female to USB-A Male USB adapter, such as https://smile.amazon.com/gp/product/B083XXLW77
    
     .. warning::
-        This is the **#1 reason** for problems in VRCFaceTracking with Index users. 
+        This is the **#1 reason** for VRCFaceTracking problems with Index users. 
         **DO NOT BUY THE SHORT STUBBY USB2.0 ADAPTERS**. A proper USB 3.0+ adapter will be "long"! 
 
 #. Remove the front plate covering the frunk area of the Index. 
@@ -88,9 +92,9 @@ This section assume you are intending to use a USB-C female to USB-A Male USB ad
 #. Connect the Facial Tracker to the adapter, and the adapter into the frunk USB port directly. Using a USB hub in the frunk *can* cause issues.
 #. Mounting options for the Valve Index
 
-   - https://discord.com/channels/849300336128032789/915075185328152606/987813371992748072
+   - `'Road to Alcoholism' Index Front Plate Vive Facial Tracker Mount (VRCFT Discord) <https://discord.com/channels/849300336128032789/915075185328152606/987813371992748072>`_
    - MORE TODO
-   - The MidnightTech little-stub mount for the Valve Index is *not that great*... 
+   - *Extra note*: The MidnightTech little-stub mount for the Valve Index is *not that good* at being a mount... 
 
 The Index frunk area can get quite warm, and the USB adapters can get **very hot**, making the headset heat worse. If possible, try to keep the front of the headset actively cooled, and/or add a heatsink to the USB adapter. 
 

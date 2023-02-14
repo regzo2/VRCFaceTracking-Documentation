@@ -7,4 +7,4 @@ Vive Wireless and Eye + Face Tracking
    Document under construction
 
 
-It works (with some quirks). 
+It works (with some quirks). Don't believe that popup from SRanipal saying otherwise. 

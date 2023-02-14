@@ -9,7 +9,7 @@ Welcome to VRCFT Setup documentation!
 
 Learn how to use face tracking for VRChat. 
 
-Join the `VRCFT Discord <https://discord.gg/Fh4FNehzKn>`_
+Join the `VRCFT Discord <https://discord.gg/Fh4FNehzKn>`_ for the community, discussion, and live support. 
 
 Visit the `VRCFaceTracking Github <https://github.com/benaclejames/VRCFaceTracking>`_
 
@@ -18,6 +18,11 @@ Visit the `VRCFaceTracking Github <https://github.com/benaclejames/VRCFaceTracki
 .. note::
 
    Documentation under development
+
+.. note::
+
+   Some links may be pointing to posts for files in the VRCFaceTracking Discord server. 
+   To be able to see these you need to `join the server <https://discord.gg/Fh4FNehzKn>`_
 
 Index
 =========================
