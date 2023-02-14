@@ -38,7 +38,7 @@ Thus:
 Installing Via Vive Console 
 ---------------------------
 
-#. It is recommended to install Vive Console via Steam: https://store.steampowered.com/app/1635730/VIVE_Console_for_SteamVR/
+#. It is recommended to install `Vive Console via Steam <https://store.steampowered.com/app/1635730/VIVE_Console_for_SteamVR/>`_
 #. After install, run Vive Console once to let it's internal installers run. You never need to run Vive Console again. 
 
    - An alternative is to go to the Vive Console install location(``Steam\steamapps\common\VIVEDriver\App\SRanipal``) and simply run the driver installer in that folder, and never touch Vive Console. 
@@ -47,14 +47,14 @@ Installing Via Vive Console
 Installing Via v1.3.6.5 .zip
 -----------------------------
 
-#. Download the SRanipal v1.3.6.5 .zip: https://discord.com/channels/849300336128032789/915075185328152606/1017600042837753906
+#. Download the `SRanipal v1.3.6.5 .zip <https://discord.com/channels/849300336128032789/915075185328152606/1017600042837753906>`_
 #. Unzip the folder and run ``DriverInstaller.msi``
 
 
 Installing Via v1.3.1.1 Installer
 ---------------------------------
 
-#. Download the SRanipal v1.3.1.1 installer: https://drive.google.com/file/d/16Qbl2NKHCBK_8osIDu0o1-03WFiDxtMX/view?usp=sharing
+#. Download the `SRanipal v1.3.1.1 installer <https://drive.google.com/file/d/16Qbl2NKHCBK_8osIDu0o1-03WFiDxtMX/view?usp=sharing>`_
 #. Run the installer and complete the installation process
 #. Download the old set of SRanipal binaries (link here) and replace the VRCFT SRanipal ModuleLibs
 
@@ -98,7 +98,7 @@ Once SRanipal initializes, the tray icon can show a few possible states indicati
 +--------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 | Green        | Eye tracker (VPE) was initialized and sending eye tracking data | Vive Facial Tracker was initialized and sending face tracking data |
 +--------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| Purple       | Eye tracker (Focus 3) successful connection                     | Face Tracker (Focus 3) successful connection                       |
+| Purple       | Eye tracker (Focus 3) successful connection, uninitialized      | Face Tracker (Focus 3) successful connection, uninitialized        |
 +--------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 
 .. image:: images/sranipal_face_states.png
@@ -118,4 +118,7 @@ Start calibration by making sure "Use Eye Tracking" is enabled, then hitting the
 Common Issues (and How to Solve Them)
 =====================================
 
-- SRanipal starts but cannot right-click the tray icon. 
+- **SRanipal starts but seems stuck, cannot right-click the tray icon** 
+
+   - Cause: You are running a version of SRanipal that checks for a connected Vive Pro headset before finishing runtime initialization. 
+   - Solution: First make sure to uninstall SRanipal following these instructions: :ref:`uninstalling sranipal`; then follow the instructions under :ref:`sranipal setup` for installing **SRanipal v1.3.6.5**. 
