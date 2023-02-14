@@ -36,3 +36,10 @@ Common Hardware Issues
 - The headset cable can be damaged with heavy use, especially if it gets tangled around or used with a ceiling pulley system. 
   A damaged cable *may not show tell-tale "display snow"* or even obvious physical indicators, but can affect USB connectivity of the Eye but more commonly, the Vive Facial Tracker. 
   Replacing the headset cable will often resolve "cutting out" or "fail to initialize" face and eye tracking problems. 
+
+Mods
+====
+
+The stock VPE experience kind of sucks, but what if it could be *way* better? 
+
+TODO
