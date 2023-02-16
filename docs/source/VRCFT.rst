@@ -20,6 +20,21 @@ TODO
 To use VRCFT, make sure to enable OSC in VRChat. 
 VRCFaceTracking will automatically set OSC to "Enabled" if it detects that it wasn't already, but you can (and should) also enable it manually. 
 
+Changing the OSC IP and Ports
+------------------------------
+
+Use ``--osc=[output port]:[ip address]:[input port]`` launch argument.
+
+For example: ``--osc=9000:127.0.0.1:9100`` is the common option when using VRCFaceTracking with :ref:`VRChatOSCRouter`. 
+
+To set this permanently, create a shortcut to the VRCFaceTracking program, right-click the newly-created shortcut and open "Properties", and add the line to the shortcut "Target". 
+Make sure to maintain a space between the flags and what was in the box already, and keep the flags outside of the quotation marks of the file path if they exist.
+
+.. image:: ware/images/vrcft_shortcut_example.png
+   :width: 300
+   :align: center
+   :alt: vrcft shortcut example
+
 VRCFaceTracking "Housekeeping" 
 ==============================
 

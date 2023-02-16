@@ -40,6 +40,7 @@ Index
 
    VRCFT
    ware/sranipal
+   VOR
 
 
 .. toctree::

@@ -47,6 +47,11 @@ Installing Via Vive Console
 Installing Via v1.3.6.5 .zip
 -----------------------------
 
+.. note:: 
+   Using SRanipal with this zip will not automatically install the SRanipalService, which means starting VRCFaceTracking or any other
+   program that uses SRanipal **will not start SRanipal automatically**. Until we release a workaround make sure to **run sr_runtime.exe first**
+   before using VRCFaceTracking!
+
 #. Download the `SRanipal v1.3.6.5 .zip <https://discord.com/channels/849300336128032789/915075185328152606/1017600042837753906>`_
 #. Unzip the folder and run ``DriverInstaller.msi``
 
@@ -60,7 +65,7 @@ Installing Via v1.3.1.1 Installer
 
 .. wasn't there a mirror on Ben's server somewhere 
 
-**Important:** The installer for v1.3.1.1 is has a known failure point during installation: **Error 1001**. It is not entirely clear why it happens. 
+**Important:** The installer for v1.3.1.1 has a known failure point during installation: **Error 1001**. It is not entirely clear why it happens. 
 
     .. image:: images/vive_installer_error_1001.png
         :width: 500
