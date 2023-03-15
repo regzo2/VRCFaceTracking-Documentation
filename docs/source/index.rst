@@ -60,7 +60,16 @@ Index
    :caption: Avatar Setup:
 
    avatar/overview
+   avatar/setup
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Unified:
+
+   unified/overview
+   unified/expressions
+   unified/tracking
+   
 .. Indices and tables
 .. ==================
 
