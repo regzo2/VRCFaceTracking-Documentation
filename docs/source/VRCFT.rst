@@ -12,6 +12,8 @@ VRCFaceTracking fulfills this role as the intermediary, creating a standard face
 
 Download the latest version here: https://github.com/benaclejames/VRCFaceTracking/releases/latest
 
+.. _Using VRCFaceTracking:
+
 Using VRCFaceTracking 
 =====================
 

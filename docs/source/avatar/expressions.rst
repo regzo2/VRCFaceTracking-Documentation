@@ -1,3 +1,5 @@
+.. _Unified Expressions:
+
 ===================
 Unified Expressions
 ===================
@@ -31,11 +33,12 @@ Unified Expressions Overview
 Why use Unified Expressions? 
 --------------------------------
 
-**Unified Expressions** at its foundations is a fully envolved face expression standard that avatars 
-can use directly for creating shapes. It is also able to use shapes designed for other tracking standards and 
+**Unified Expressions** is a fully envolved face expression standard that avatars can use directly for 
+creating face tracking shapes. It is able to use shapes designed for other tracking standards and 
 provide tracking transformations to work with different shape standards such as ``ARKit`` and ``SRanipal``. 
+
 **VRCFaceTracking** uses **Unified Expressions** as the bridge between tracking interfaces and avatars to allow 
-for a huge amount of tracking customization and specialization.
+for a huge amount of tracking customization, specialization, and backwards compatibility for many existing avatars.
 
 Building an avatar for **Unified Expressions** also means that you will only have to build a single set of shapes 
 for an avatar that will work nearly identically across different face tracking devices and interfaces. 
@@ -49,13 +52,13 @@ Unified Expressions Best Practices
 
 **Unified Expressions** is similar to most other facial expression standards available, though with many additional
 transformed expression shapes provided that allow avatars to highly specialize or even optimise for particular
-avatar setups. Generally avatars should try correlate to the provided shapes for the best and most expected
+:ref:`Avatar Setup`. Generally avatars should try correlate to the provided shapes for the best and most accurate
 tracking results.
 
 Creators who wish to use **Unified Expressions** on their avatars will find that there are many tracked shapes
-available for use for avatar face tracking. Creators should familiarize with all available shapes and decide
-what parameters and shapes work best with their avatars as **Unified Expressions** has many *Blended* shapes 
-that can be used to simplify, combine, or alleviate both shape creation and offer more simplified tracking.
+available for use for avatar face tracking. **Unified Expressions** has many *Blended* shapes that can be used 
+to simplify, combine, or alleviate both shape creation and offer more simplified tracking. Creators should 
+familiarize with all available shapes and decide what shapes work best with avatars.
 
 
 .. _Unified Expressions Shapes:
@@ -68,18 +71,19 @@ shapes available for use in **VRCFaceTracking** on avatars.
 
 Generally avatars should try to base their expression shapes on the base **Unified Expressions** shapes, and 
 combine into *Blended* shapes afterward. Depending on the desired tracking or expression shapes available on an 
-avatar, there are :ref:`Unified Expression Blended Shapes` that combine or simplify many of the base 
+avatar, there are :ref:`Unified Expressions Blended Shapes` that combine or simplify many of the base 
 shapes into more compact and simplified shapes.
 
-.. _Unified Expressions Base:
-Unified Expressions Base
+.. _Unified Expressions Base Shapes:
+
+Unified Expressions Base Shapes
 -------------------------------
 
 The following tables contain all base shapes that are used on avatars and as the basis of **VRCFaceTracking**'s 
 avatar parameters.
 
 .. note::
-  For **VRChat** specific avatar parameters, refer to :ref:`Avatar Parameters`.
+  For **VRCFaceTracking** specific avatar parameters, refer to :ref:`Avatar Parameters`.
 
 ..
   .. list-table:: Example Shape Table
@@ -118,15 +122,6 @@ avatar parameters.
         MouthLowerLeft,
         MouthLowerRight,
       - 2 Picture references (left, right).
-
-.. figure:: images/jawopenexample.gif
-    :align: center
-    :scale: 50%
-
-    EyeLookOutRight
-
-    Right eye looks outwards.
-
 
 .. list-table::
    :widths: 25 50 25
@@ -168,18 +163,13 @@ avatar parameters.
      - Left eye looks down.
      - 
 
-
-.. list-table:: Eye Expressions
-   :widths: 25 50 25
-   :header-rows: 1
-
-   * - Name
-     - Function
-     - Reference
+   * - 
+     - 
+     - 
 
    * - EyeClosedRight
      - Closes the right eyelid.
-     - .. image:: images/jawopenexample.gif
+     -
      
    * - EyeClosedLeft
      - Closes the right eyelid.
@@ -218,7 +208,7 @@ avatar parameters.
      - 
 
 
-.. list-table:: Eyebrow Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -259,7 +249,7 @@ avatar parameters.
      - 
 
 
-.. list-table:: Nose Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -284,7 +274,7 @@ avatar parameters.
      -
 
 
-.. list-table:: Cheek Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -317,7 +307,7 @@ avatar parameters.
      -
 
 
-.. list-table:: Jaw Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -338,7 +328,7 @@ avatar parameters.
      - 
      
    * - JawForward
-     - Pushes jawbone forwards. |br| Test
+     - Pushes jawbone forwards.
      - 
      
    * - JawBackward :sup:`1`
@@ -357,7 +347,7 @@ avatar parameters.
 | :sup:`2` : These shapes are generally not necessarily physically possible.
 
 
-.. list-table:: Lip Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -367,7 +357,7 @@ avatar parameters.
 
    * - LipSuckUpperRight
      - Upper right lip part tucks in the mouth.
-     - 
+     - .. image:: images/jawopenexample.gif
      
    * - LipSuckUpperLeft
      - Upper left lip part tucks in the mouth.
@@ -556,8 +546,7 @@ avatar parameters.
 | :sup:`1` : These shapes are currently unused by most interfaces (though they are anatomically based), intended for future compatibility.
 
 
-
-.. list-table:: Tongue Expressions
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 
@@ -567,7 +556,7 @@ avatar parameters.
 
    * - TongueOut
      - Sticks the tongue out of the mouth.
-     - 
+     - .. image:: images/jawopenexample.gif
 
    * - 
      - 
@@ -625,24 +614,58 @@ avatar parameters.
      - Tongue tip rotates left.
      -
 
+
+.. list-table::
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - Name
+     - Function
+     - Reference
+
+   * - SoftPalateClose
+     - Closes the back of the throat in the mouth.
+     - .. image:: images/jawopenexample.gif
+      
+   * - ThroatSwallow
+     - Pulls the Adam's Apple upwards (to swallow).
+     -
+      
+   * - 
+     - 
+     - 
+      
+   * - NeckFlexRight
+     - Flexes the right neck muscle.
+     -
+      
+   * - NeckFlexLeft
+     - Flexes the left neck muscle.
+     -
+
 | :sup:`1` : These shapes are currently unused by most interfaces (though they are anatomically based), intended for future compatibility.
 
+.. _Unified Expressions Blended Shapes:
 
 Unified Expressions Blended Shapes
 ----------------------------------
  
-The following shapes are intended to simplify and blend together the :ref:`Unified Expressions Base` 
-shapes above. Creating shapes for these *Blended* shapes instead can be used to simplify shape 
+The following shapes are intended to simplify and blend together the :ref:`Unified Expressions Base Shapes` 
+above. Creating shapes for these *Blended* shapes instead can be used to simplify shape 
 creation, optimise avatars for specific face tracking setups, or allow an avatar to exhibit certain 
 tracking behaviors.
 
 The following shapes also are categorized by what their general expression functionality is based on.
 
+.. All of the following shapes are pulled from https://github.com/benaclejames/VRCFaceTracking/blob/Quest-Pro/VRCFaceTracking/Params/Expressions/UnifiedExpressionsMerger.cs
+   Specifically parameters that directly blend the shapes together (if a parameter uses two or more parameters on the pos/neg)
+
 
 .. note::
   **Unified Expressions** as a standard is intended to be as flexible as possible for avatar creation. 
   Many shapes may be able to be discretionally mixed and matched together that are not otherwise 
-  listed here. The listed shapes below have direct tracking transformations available in **VRCFaceTracking**.
+  listed here. The listed shapes below also have direct tracking transformations available in 
+  **VRCFaceTracking**.
 
 
 .. note::
@@ -660,11 +683,15 @@ The following shapes also are categorized by what their general expression funct
      - Reference
 
    * - BrowsDownRight
-     - Pulls the right brow down into an 'Angry' expression.
+     - Pulls the right eyebrow down and in.
      - 
 
    * - BrowsDownLeft
-     - Pulls the left brow down into an 'Angry' expression.
+     - Pulls the left eyebrow down and in.
+     - 
+     
+   * - BrowsDown
+     - Pulls the eyebrows down and in.
      - 
   
 .. list-table:: Mouth Open Expressions
@@ -675,6 +702,14 @@ The following shapes also are categorized by what their general expression funct
      - Function
      - Reference
 
-   * - TongueOut
-     - Sticks the tongue out of the mouth.
+   * - MouthUpperUp
+     - Raises the upper lips.
+     - 
+     
+   * - MouthLowerDown
+     - Lowers the lower lips.
+     - 
+          
+   * - MouthOpen
+     - Parts the lips evenly.
      - 

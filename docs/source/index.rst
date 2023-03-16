@@ -61,14 +61,9 @@ Index
 
    avatar/overview
    avatar/setup
+   avatar/unified
+   avatar/expressions
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Unified:
-
-   unified/overview
-   unified/expressions
-   unified/tracking
    
 .. Indices and tables
 .. ==================
