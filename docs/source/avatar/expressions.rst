@@ -33,16 +33,19 @@ Unified Expressions Overview
 Why use Unified Expressions? 
 --------------------------------
 
-**Unified Expressions** is a fully envolved face expression standard that avatars can use directly for 
-creating face tracking shapes. It is able to use shapes designed for other tracking standards and 
-provide tracking transformations to work with different shape standards such as ``ARKit`` and ``SRanipal``. 
+**Unified Expressions** is a fully envolved face expression standard that avatars can use to 
+create face tracking shapes. It is able to use shapes designed for other tracking standards 
+and provide tracking transformations to work with different shape standards such as 
+``ARKit`` and ``SRanipal``. 
 
-**VRCFaceTracking** uses **Unified Expressions** as the bridge between tracking interfaces and avatars to allow 
-for a huge amount of tracking customization, specialization, and backwards compatibility for many existing avatars.
+**VRCFaceTracking** uses **Unified Expressions** as the bridge between tracking interfaces and 
+avatars to allow for a huge amount of tracking customization, specialization, and backwards 
+compatibility for many existing avatars.
 
-Building an avatar for **Unified Expressions** also means that you will only have to build a single set of shapes 
-for an avatar that will work nearly identically across different face tracking devices and interfaces. 
-**Unified Expressions** shapes are untied to any device or interface implementation.
+Building an avatar for **Unified Expressions** also means that you will only have to build a 
+single set of shapes for an avatar that will work nearly identically across different face 
+tracking devices and interfaces. **Unified Expressions** shapes are untied to any device 
+or interface implementation.
 
 
 .. _Unified Expressions Best Practices:
@@ -50,15 +53,15 @@ for an avatar that will work nearly identically across different face tracking d
 Unified Expressions Best Practices
 --------------------------------------
 
-**Unified Expressions** is similar to most other facial expression standards available, though with many additional
-transformed expression shapes provided that allow avatars to highly specialize or even optimise for particular
-:ref:`Avatar Setup`. Generally avatars should try correlate to the provided shapes for the best and most accurate
-tracking results.
+**Unified Expressions** is similar to most other facial expression standards available, though 
+with many additionaltransformed expression shapes provided that allow avatars to highly specialize 
+or even optimise for particular:ref:`Avatar Setup`. Generally avatars should try correlate to the 
+provided shapes for the best and most accurate tracking results.
 
-Creators who wish to use **Unified Expressions** on their avatars will find that there are many tracked shapes
-available for use for avatar face tracking. **Unified Expressions** has many *Blended* shapes that can be used 
-to simplify, combine, or alleviate both shape creation and offer more simplified tracking. Creators should 
-familiarize with all available shapes and decide what shapes work best with avatars.
+Creators who wish to use **Unified Expressions** on their avatars will find that there are many tracked 
+shapesavailable for use for avatar face tracking. **Unified Expressions** has many *Blended* shapes that 
+can be used to simplify, combine, or alleviate both shape creation and offer more simplified tracking. 
+Creators should familiarize with all available shapes and decide what shapes work best with avatars.
 
 
 .. _Unified Expressions Shapes:
@@ -69,10 +72,10 @@ Unified Expressions Shapes
 This sections contains documentation for all currently implemented **Unified Expressions** 
 shapes available for use in **VRCFaceTracking** on avatars.
 
-Generally avatars should try to base their expression shapes on the base **Unified Expressions** shapes, and 
-combine into *Blended* shapes afterward. Depending on the desired tracking or expression shapes available on an 
-avatar, there are :ref:`Unified Expressions Blended Shapes` that combine or simplify many of the base 
-shapes into more compact and simplified shapes.
+Generally avatars should try to base their expression shapes on the base **Unified Expressions** shapes, 
+and combine into *Blended* shapes afterward. Depending on the desired tracking or expression shapes 
+available on an avatar, there are :ref:`Unified Expressions Blended Shapes` that combine or simplify many 
+of the base shapes into more compact and simplified shapes.
 
 .. _Unified Expressions Base Shapes:
 
@@ -318,6 +321,10 @@ avatar parameters.
    * - JawOpen
      - Opens jawbone.
      - .. image:: images/jawopenexample.gif
+      
+   * - MouthClose
+     - Closes the lips when jaw opens.
+     - .. image:: images/jawopenexample.gif
 
    * - JawRight
      - Pushes jawbone right.
@@ -442,6 +449,15 @@ avatar parameters.
    * - MouthUpperDeepenLeft
      - Upper left lip part pushes in the cheek.
      -
+               
+   * - NoseSneerRight
+     - Scrunches the left face side.
+     -
+               
+   * - NoseSneerLeft
+     - Scrunches the right face side.
+     -
+
             
    * - 
      - 
@@ -689,12 +705,43 @@ The following shapes also are categorized by what their general expression funct
    * - BrowsDownLeft
      - Pulls the left eyebrow down and in.
      - 
-     
+               
    * - BrowsDown
      - Pulls the eyebrows down and in.
      - 
+               
+   * - 
+     - 
+     - 
+     
+   * - BrowsInnerUp
+     - Moves the inner eyebrows up.
+     - 
+          
+   * - BrowsOuterUp
+     - Moves the outer eyebrows up.
+     - 
+
+   * - BrowsOuterUp
+     - Moves the outer eyebrows up.
+     - 
+
+
+
+.. list-table:: Eye Blended Expressions
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - EyesSquint
+     - Squeezes both eye sockets
+     - 
+
+   * - Name
+     - Function
+     - Reference
   
-.. list-table:: Mouth Open Expressions
+
+.. list-table:: Mouth Blended Expressions
    :widths: 25 50 25
    :header-rows: 1
 
@@ -711,5 +758,70 @@ The following shapes also are categorized by what their general expression funct
      - 
           
    * - MouthOpen
-     - Parts the lips evenly.
+     - Parts open the lips evenly.
+     - 
+               
+   * - 
+     - 
+     - 
+               
+   * - MouthSmileRight
+     - Right side mouth smiles.
+     - 
+               
+   * - MouthSmileLeft
+     - Left side mouth smiles.
+     - 
+
+
+.. list-table:: Lip Blended Expressions
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - Name
+     - Function
+     - Reference
+
+   * - LipSuckUpper
+     - Upper lips tuck in the mouth.
+     - 
+     
+   * - LipSuckLower
+     - Lower lips tuck in the mouth.
+     - 
+
+   * - LipSuck
+     - Lips tuck in the mouth.
+     - 
+          
+   * - 
+     - 
+     - 
+     
+   * - LipSuckUpper
+     - Upper lips push out into a funnel.
+     - 
+     
+   * - LipSuckLower
+     - Lower lips push out into a funnel.
+     - 
+
+   * - LipSuck
+     - Lips push out into a funnel.
+     - 
+               
+   * - 
+     - 
+     - 
+     
+   * - LipPuckerRight
+     - Right side lips push out and pinch together.
+     - 
+     
+   * - LipPuckerLeft
+     - Left side lips push out and pinch together.
+     - 
+
+   * - LipPucker
+     - Lips push out and pinch together.
      - 

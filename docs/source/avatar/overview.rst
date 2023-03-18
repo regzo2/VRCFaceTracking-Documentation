@@ -36,11 +36,11 @@ Avatars
 Avatars are the digital bodies that users inhabit on various 
 virtual platforms such as **VRChat**, **ChilloutVR**, and **Neos**.
 Generally avatars have a level of customization and control of expression 
-on these platforms, and VRCFaceTracking allows face tracking interfaces such 
+on these platforms, and **VRCFaceTracking** allows face tracking interfaces such 
 as the Vive Pro Eye, Vive Facial Tracker, and Quest Pro to control avatar 
 expressions.
 
-Avatars generally will need to be setup to use VRCFaceTracking, 
+Avatars generally will need to be setup to use **VRCFaceTracking**, 
 though there may be some avatars already come with full or 
 *partial* **VRCFaceTracking** support.
 
@@ -55,6 +55,6 @@ though there may be some avatars already come with full or
 
 .. note::
    Avatar creators will generally clearly label an avatar's level of 
-   support for VRCFaceTracking, and if they have face tracking 
+   support for **VRCFaceTracking**, or if they have face tracking 
    shapes (``SRanipal``, ``AR52/ARKit/PerfectSync``, ``Meta Quest FACS``, or 
    ``Unified Expressions`` are very commonly associated).
